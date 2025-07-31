@@ -19,6 +19,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/riyadshauk/markdown-docx-swift.git", branch: "main"),
+        // .package(path: "../MarkdownToDocx"),
         .package(url: "https://github.com/weichsel/ZIPFoundation.git", from: "0.9.19")
     ],
     targets: [
@@ -26,6 +27,7 @@ let package = Package(
             name: "MarkdownFormatBridge",
             dependencies: [
                 .product(name: "MarkdownToDocx", package: "markdown-docx-swift")
+                // .product(name: "MarkdownToDocx", package: "MarkdownToDocx")
             ],
             path: "Sources"
         ),
@@ -34,6 +36,7 @@ let package = Package(
             dependencies: [
                 "MarkdownFormatBridge",
                 .product(name: "MarkdownToDocx", package: "markdown-docx-swift"),
+                // .product(name: "MarkdownToDocx", package: "MarkdownToDocx"),
                 .product(name: "ZIPFoundation", package: "ZIPFoundation")
             ],
             path: "Tests"

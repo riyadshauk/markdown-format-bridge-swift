@@ -3,7 +3,7 @@ import ZIPFoundation
 import MarkdownToDocx
 @testable import MarkdownFormatBridge
 
-final class GlueLibraryTests: XCTestCase {
+final class PDFToDocxConfig: XCTestCase {
     
     func testPredefinedConfigurations() throws {
         // Test that all predefined configurations can be created
